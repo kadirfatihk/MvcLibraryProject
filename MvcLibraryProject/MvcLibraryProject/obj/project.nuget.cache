@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "UsoUJbU8GAo=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\kadir\\source\\repos\\MvcLibraryProject\\MvcLibraryProject\\MvcLibraryProject.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\kadir\\.nuget\\packages\\microsoft.aspnetcore.dataprotection.abstractions\\8.0.8\\microsoft.aspnetcore.dataprotection.abstractions.8.0.8.nupkg.sha512"
+  ],
+  "logs": []
+}

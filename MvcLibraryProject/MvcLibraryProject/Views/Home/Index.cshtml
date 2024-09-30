@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .alert.alert-success {
+            margin: 10px auto; /* Üst-alt 10px, sağ-sol otomatik */
+        }
+    </style>
+</head>
+<body>
+    <!-- Welcome message with the user's full name -->
+    <div class="alert alert-success mt-4 w-25" style="text-align:center" role="alert">
+        Hoşgeldiniz  @User.Claims.FirstOrDefault(x => x.Type == "fullname")?.Value
+    </div>
+
+</body>
+</html>
+<!-- Row to hold the book and author management cards -->
+<div class="row mt-5 justify-content-center">
+    <!-- Book management card -->
+    <div class="col-sm-6 mb-3 mb-sm-0 w-25">
+        <div class="card">
+            <div class="card-body d-flex justify-content-center flex-column">
+                <h5 class="card-title text-center">Kitap İşlemleri</h5>
+                <p class="card-text text-center">Kitap işlemleri buradan yapılmaktadır.</p>
+                <a asp-controller="Book" asp-action="BookList" class="btn btn-outline-info">Listele</a>
+                <a asp-controller="Book" asp-action="BookCreate" class="btn btn-outline-success mt-2">Ekle</a>
+            </div>
+        </div>
+    </div>
+    <!-- Author management card -->
+    <div class="col-sm-6 w-25">
+        <div class="card">
+            <div class="card-body d-flex justify-content-center flex-column">
+                <h5 class="card-title text-center">Yazar İşlemleri</h5>
+                <p class="card-text text-center">Yazar işlemleri buradan yapılmaktadır.</p>
+                <a asp-controller="Author" asp-action="AuthorList" class="btn btn-outline-info">Listele</a>
+                <a asp-controller="Author" asp-action="AuthorCreate" class="btn btn-outline-success mt-2">Ekle</a>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<!-- Partial view for the footer -->
+<partial name="_footerPartial" />

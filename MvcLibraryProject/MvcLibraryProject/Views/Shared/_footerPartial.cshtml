@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        footer {
+            background-color: #222;
+            color: white;
+            padding: 20px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-decoration: none;
+        }
+            footer h3 {
+                margin-bottom: 15px;
+            }
+
+           
+            footer a {
+                color: white;
+                text-decoration: none; 
+            }
+
+                
+                footer a:hover {
+                    color: white; 
+                    text-decoration: none; 
+                }
+
+            footer ul {
+                list-style-type: none;
+                padding: 0;
+            }
+
+                footer ul li {
+                    margin-bottom: 10px;
+                }
+
+            footer p {
+                margin: 5px 0;
+            }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+           
+            .footer-content > div:last-child {
+                margin-top: 0px;
+            }
+
+       
+        .no-icon::before {
+            content: ""; 
+        }
+
+       
+        .footer-content > div:nth-child(3) a:last-child {
+            float: right;
+            margin-right: 95px; /* İkonlar arasında boşluk oluşturmak için */
+        }
+    </style>
+</head>
+<body>
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h3>Sayfalar</h3>
+                <ul>
+                    <li><a asp-controller="Home" asp-action="Index">Ana Sayfa</a></li>
+                    <li><a asp-controller="Home" asp-action="About">Hakkımızda</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>İletişim</h3>
+                <p class="no-icon" style="margin-left:0px"><a href="mailto:kadir.fatih96@gmail.com">kadir.fatih96@gmail.com</a></p>
+            </div>
+
+            <div>
+                <h3>Sosyal Medya</h3>
+                <a href="https://github.com/kadirfatihk" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/2048px-Octicons-mark-github.svg.png" alt="GitHub" style="width: 32px; height: 32px; margin-right: 10px; filter: invert(100%);">
+                </a>
+                <a href="https://www.linkedin.com/in/kadirfatihkose/" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/768px-LinkedIn_logo_initials.png" alt="LinkedIn" style="width: 32px; height: 32px; filter: grayscale(100%);">
+                </a>
+            </div>
+
+            <div>
+                <a asp-controller="Auth" asp-action="SignUp" class="btn btn-outline-light">Çıkış Yap</a>
+            </div>
+        </div>
+        <p class="no-icon" style="text-align:center">Tüm hakları saklıdır.</p>
+    </footer>
+
+</body>
+</html>

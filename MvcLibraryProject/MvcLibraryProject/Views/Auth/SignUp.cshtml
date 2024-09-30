@@ -1,0 +1,58 @@
+﻿@model SignUpViewModel
+
+<!-- Row for layout, offset to the right, top margin -->
+<div class="row offset-3 mt-5">
+
+    <div class="col-6" style="width:60%">
+
+        <div class="card">
+
+            <div class="card-header fw-bold fs-4 text-center">
+                Kayıt Ol
+            </div>
+
+            <div class="card-body">
+
+                <!-- Form for sign-up functionality -->
+                <form method="post" asp-controller="Auth" asp-action="SignUp">
+                   
+                    <div class="form-floating mb-2">
+                        <input asp-for="fullName" type="text" class="form-control" placeholder="İsim Soyisim" />
+                        <label for="floatingInput">İsim Soyisim</label>
+                        <span asp-validation-for="fullName" class="text-danger"></span> 
+                    </div>
+                   
+                    <div class="form-floating mb-2">
+                        <input asp-for="phoneNumber" type="text" class="form-control" placeholder="Telefon Numarası" />
+                        <label for="floatingInput">Telefon Numarası</label>
+                        <span asp-validation-for="phoneNumber" class="text-danger"></span> 
+                    </div>
+                    
+                    <div class="form-floating mb-2">
+                        <input asp-for="email" type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                        <label for="floatingInput">Email address</label>
+                        <span asp-validation-for="email" class="text-danger"></span> 
+                    </div>
+
+                    <div class="form-floating mb-2">
+                        <input asp-for="password" type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                        <label for="floatingPassword">Password</label>
+                        <span asp-validation-for="password" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-floating mb-2">
+                        <input asp-for="passwordConfirm" type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                        <span asp-validation-for="passwordConfirm" class="text-danger"></span> 
+                        <label for="floatingPassword">Password Confirm</label>
+                    </div>
+
+                    <!-- Sign-Up button -->
+                    <button class="btn btn-primary w-100 py-2 mt-3" type="submit">Kayıt Ol</button>
+                    <p class="mt-5 mb-3 text-body-secondary">© 2024</p>
+                    <!-- Link to the login page -->
+                    Hesabınız varsa <a asp-controller="Auth" asp-action="Login" type="submit">buradan</a> giriş yapabilirsiniz.
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

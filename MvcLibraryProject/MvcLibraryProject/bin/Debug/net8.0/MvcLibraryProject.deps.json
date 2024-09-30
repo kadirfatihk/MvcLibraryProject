@@ -1,0 +1,41 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "MvcLibraryProject/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.DataProtection.Abstractions": "8.0.8"
+        },
+        "runtime": {
+          "MvcLibraryProject.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.DataProtection.Abstractions/8.0.8": {
+        "runtime": {
+          "lib/net8.0/Microsoft.AspNetCore.DataProtection.Abstractions.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.824.36908"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MvcLibraryProject/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.AspNetCore.DataProtection.Abstractions/8.0.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7VU0V3HoBWm341UFxtNXFdWBPXgp+oruaKPGtxuBOfy4pBV2HPk3oY80H6gjgzh+pMmFraa0hNmpEu9+Qp+UBg==",
+      "path": "microsoft.aspnetcore.dataprotection.abstractions/8.0.8",
+      "hashPath": "microsoft.aspnetcore.dataprotection.abstractions.8.0.8.nupkg.sha512"
+    }
+  }
+}

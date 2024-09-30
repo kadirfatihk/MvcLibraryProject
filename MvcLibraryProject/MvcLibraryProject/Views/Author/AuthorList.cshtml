@@ -1,0 +1,27 @@
+﻿@model List<AuthorListViewModel>
+
+<!-- Table to display the list of authors -->
+<table class="table mt-5">
+    <thead>
+        <tr>
+            <th>Yazar Adı</th>
+            <th>Yazar Soyadı</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <!-- Loop through each author in the provided Model -->
+        @foreach (var author in Model)
+        {
+            <tr class="justify-content-center">
+                <td>@author.firstName</td>
+                <td>@author.lastName</td>
+                <td>
+                    <!-- Link to Author Details page, passing the author ID -->
+                    <a class="btn btn-outline-secondary" asp-controller="Author" asp-action="AuthorDetails" asp-route-id="@author.ıd">Detaylar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<partial name="_footerPartial" />

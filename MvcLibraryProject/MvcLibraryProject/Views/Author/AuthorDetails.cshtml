@@ -1,0 +1,32 @@
+﻿@model MvcLibraryProject.ViewModels.AuthorDetailsViewModel
+
+<!-- Author Details Page Title -->
+<h3 class="mt-5 fw-bold text-center" style="color:brown">Yazar Detay Sayfası</h3>
+
+<!-- Table to display author details -->
+<table class="table mt-5">
+    <thead>
+        <tr>
+            <th>Yazar Adı</th>
+            <th>Yazar Soyadı</th>
+            <th>Doğum Tarihi</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="justify-content-center">
+            <td>@Model.firstName</td> <!-- Display author's first name -->
+            <td>@Model.lastName</td>  <!-- Display author's last name -->
+            <td>@Model.dateOfBirth</td> <!-- Display author's date of birth -->
+            <td>
+                <!-- Link to Edit Author action, passing author ID -->
+                <a asp-controller="Author" asp-action="AuthorEdit" asp-route-id="@Model.ıd" class="btn btn-dark">Düzenle</a>
+
+                <!-- Link to Delete Author action, passing author ID -->
+                <a asp-controller="Author" asp-action="AuthorDelete" asp-route-id="@Model.ıd" class="btn btn-danger">Sil</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- Partial view to render the footer -->
+<partial name="_footerPartial" /> 

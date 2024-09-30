@@ -1,0 +1,29 @@
+﻿@model List<BookListViewModel>
+
+<h3 class="mt-5 fw-bold text-center" style="color:brown">Kitap Listeleme Sayfası</h3>
+
+<table class="table mt-5">
+    <thead>
+        <tr>
+            <th>Kitap Adı</th>
+            <th>Kitap Türü</th>
+            <th>Yazar Adı</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var book in Model)
+        {
+            <tr class="justify-content-center">
+                <td>@book.title</td>
+                <td>@book.genre</td>
+                <td>@book.authorName</td>
+                <td>
+                    <a class="btn btn-outline-secondary" asp-controller="Book" asp-action="BookDetails" asp-route-id="@book.ıd">Detaylar</a>
+                    
+                   
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<partial name="_footerPartial" />

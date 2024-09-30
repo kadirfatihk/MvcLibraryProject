@@ -1,0 +1,31 @@
+﻿@model MvcLibraryProject.ViewModels.BookDetailsViewModel
+
+<h3 class="mt-5 fw-bold text-center" style="color:brown">Kitap Detay Sayfası</h3>
+
+<table class="table mt-5">
+    <thead>
+        <tr>
+            <th>Kitap Adı</th>
+            <th>Yazar</th>
+            <th>Kitap Türü</th>
+            <th>Yayın Tarihi</th>
+            <th>ISBN Numarası</th>
+            <th>Mevcut Kopya Sayısı</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="justify-content-center">
+            <td>@Model.title</td>
+            <td>@Model.authorFirstName @Model.authorLastName</td>
+            <td>@Model.genre</td>
+            <td>@Model.publishDate</td>
+            <td>@Model.ısbn</td>
+            <td>@Model.copiesAvailable</td>
+            <td>
+                <a asp-controller="Book" asp-action="BookEdit" asp-route-id="@Model.ıd" class="btn btn-dark">Düzenle</a>
+                <a asp-controller="Book" asp-action="BookDelete" asp-route-id="@Model.ıd" class="btn btn-danger">Sil</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<partial name="_footerPartial" />

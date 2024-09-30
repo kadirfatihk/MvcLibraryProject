@@ -1,0 +1,45 @@
+﻿@model  BookCreateViewModel
+
+<!-- Heading for the new book creation page -->
+<h3>Yeni Kitap Ekleme Sayfası</h3>
+
+<!-- Form for creating a new book, posting data to BookCreate action in BookController -->
+<form method="post" asp-controller="Book" asp-action="BookCreate" class="mt-5">
+    <div>
+        <label>Kitap Adı: </label>
+        <input asp-for="title" class="form-control" type="text" /> 
+        <span asp-validation-for="title" class="text-danger mt-3 fw-bolder"></span> 
+    </div>
+    <div>
+        <label>Türü: </label>
+        <input asp-for=genre class="form-control" type="text" />
+        <span asp-validation-for="genre" class="text-danger mt-3 fw-bolder"></span>
+    </div>
+    <div>
+        <label>Yazar Adı: </label>
+        <select  
+         asp-for="AuthorId" asp-items="@(new SelectList(ViewBag.Authors, "ıd", "firstName"))" class="form-control">
+            <option selected disabled>Seçiniz</option>
+        </select>
+        <span asp-validation-for="AuthorId" class="text-danger mt-3 fw-bolder"></span>
+    </div>
+    <div>
+        <label>Yayın Tarihi: </label>
+        <input asp-for=publishDate class="form-control" type="date" />
+        <span asp-validation-for="publishDate" class="text-danger mt-3 fw-bolder"></span>
+    </div>
+    <div>
+        <label>ISBN Numarası: </label>
+        <input asp-for="ısbn" class="form-control" type="text" />
+        <span asp-validation-for="ısbn" class="text-danger mt-3 fw-bolder"></span>
+    </div>
+    <div>
+        <label>Mevcut Kopya Sayısı: </label>
+        <input asp-for="copiesAvailable" class="form-control" type="text" />
+        <span asp-validation-for="copiesAvailable" class="text-danger mt-3 fw-bolder"></span>
+    </div>
+
+    <button type="submit" class="btn btn-success mt-3">Kaydet</button>
+
+</form>
+<partial name="_footerPartial" />

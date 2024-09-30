@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\kadir\\source\\repos\\MvcLibraryProject\\MvcLibraryProject\\wwwroot\\lib\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap.css"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.MvcLibraryProject.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.MvcLibraryProject.props",
+      "PackagePath": "build\\MvcLibraryProject.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.MvcLibraryProject.props",
+      "PackagePath": "buildMultiTargeting\\MvcLibraryProject.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.MvcLibraryProject.props",
+      "PackagePath": "buildTransitive\\MvcLibraryProject.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
